@@ -13,6 +13,7 @@ A Python-based voice assistant capable of:
 - Opening websites such as Google and YouTube
 - Accessing personal GitHub profiles
 - Handling user interactions through voice commands
+- Searching on Google.
 
 *(Additional projects will be added as they are completed.)*
 

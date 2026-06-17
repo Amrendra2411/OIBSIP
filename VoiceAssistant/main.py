@@ -64,7 +64,12 @@ def search_wiki(query):
 
 
 import webbrowser
+import urllib.parse
 
+def google_search(query):
+    query = urllib.parse.quote(query)
+    url = f"https://www.google.com/search?q={query}"
+    webbrowser.open(url)
 
 while True:
     command = listen()
@@ -95,12 +100,24 @@ while True:
 
          webbrowser.open("https://github.com/Amrendra2411/")
 
+    elif "search" in command:
+        query = command.replace("search", "").strip()
+        speak(f"Searching for {query}")
+        google_search(query)
+
+    elif "open google" in command:
+        speak("Opening Google")
+        webbrowser.open("https://www.google.com")
+
 
     elif "bye" in command:
         print("Assistant: Byeee Byee")
+        
         speak("Byeee Byee")
         break
+    elif command==" ":
+        speak("Empty command")
     else:
-        speak("Sorry , Can  you repeat again?")
+        speak("Sorry , I can't do that yet?")
 
             
