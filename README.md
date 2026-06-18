@@ -26,6 +26,11 @@ A Python-based voice assistant capable of:
 - Datetime Module
 - PyAudio
 - Git & GitHub
+- To install all the required packages,copy paste this on your cmd
+ ```bash
+pip install -r requirements.txt
+python main.py
+```
 
 ## Internship Details
 **Organization:** Oasis Infobyte  
