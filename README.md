@@ -43,7 +43,18 @@ A GUI-based BMI Calculator developed using Tkinter that allows users to:
 * Graphical BMI Trend Analysis
 * Improved User Interface Design
 
-*(Additional projects will be added as they are completed.)*
+### 🔐 Random Password Generator (Initial Version)
+
+A GUI-based Random Password Generator developed using Tkinter that allows users to:
+
+* Specify the desired password length
+* Include uppercase letters
+* Include numbers
+* Include special characters
+* Generate secure random passwords
+* Display generated passwords in a dedicated output field
+* Copy generated passwords to the clipboard with a single click
+* Validate user input and provide feedback for invalid entries
 
 ## Technologies Used
 
@@ -55,6 +66,9 @@ A GUI-based BMI Calculator developed using Tkinter that allows users to:
 * Webbrowser
 * Datetime Module
 * PyAudio
+* Random Module
+* String Module
+* Tkinter Messagebox
 * Git & GitHub
 
 ## Installation
