@@ -19,29 +19,32 @@ A Python-based voice assistant capable of:
 
 ---
 
-### ⚖️ BMI Calculator *(Initial Version)*
+### ⚖️ BMI Calculator *(Version 1.0)*
 
-A GUI-based BMI Calculator developed using Tkinter that allows users to:
+A feature-rich GUI-based BMI Calculator developed using Tkinter that allows users to:
 
-* Enter weight in kilograms
-* Enter height in meters
+* Enter weight in kilograms and height in meters
 * Calculate Body Mass Index (BMI)
 * Display BMI values up to two decimal places
 * Categorize BMI as:
-
   * Underweight
   * Normal
   * Overweight
   * Obese
-* Validate user input and handle invalid entries gracefully
+* Validate user input and ensure only positive numerical values are accepted
+* Dynamically color-code BMI categories for better visualization
+* Clear all input fields and reset the application state with a single click
+* Store BMI records persistently in a CSV file
+* Record the date and time of each BMI calculation
+* View complete BMI history in a separate window
+* Provide a modern dark-themed user interface
 
 **Future Enhancements**
 
-* Dark Theme UI
-* BMI History Tracking
-* CSV Data Storage
-* Graphical BMI Trend Analysis
-* Improved User Interface Design
+* TreeView-based history table
+* BMI Trend Visualization using Matplotlib
+* Search and Filter BMI Records
+* Export BMI History to Excel
 
 ### 🔐 Random Password Generator (Initial Version)
 
@@ -65,10 +68,12 @@ A GUI-based Random Password Generator developed using Tkinter that allows users 
 * Wikipedia API
 * Webbrowser
 * Datetime Module
-* PyAudio
+* CSV Module
+* OS Module
 * Random Module
 * String Module
 * Tkinter Messagebox
+* PyAudio
 * Git & GitHub
 
 ## Installation
