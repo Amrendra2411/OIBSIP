@@ -16,6 +16,7 @@ A Python-based voice assistant capable of:
 * Accessing personal GitHub profiles
 * Searching on Google
 * Handling user interactions through voice commands
+* A very simple GUI is integrated, you can click listen to speak
 
 ---
 

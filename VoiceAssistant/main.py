@@ -1,4 +1,23 @@
 import pyttsx3
+import tkinter as tk
+from tkinter import messagebox
+root = tk.Tk()
+root.title("Voice Assistant")
+root.geometry("600x400")
+root.configure(bg="#2c3c4d")
+root.grid_columnconfigure(0, weight=1)
+container = tk.Frame(root,bg="#2c3c4d")
+container.grid(row=0,column=0)
+
+
+
+tk.Label(container,text="VOICE ASSISTANT\n HELLO USER!",
+         font = ("Consolas",30,"bold"),bg="#2c3c4d",fg="white").grid(row=0,column=0,pady=20)
+
+Assistant_label=tk.Label(container,text="Assistant: Click the button to speak.",
+                        font = ("Consolas",20,"bold"),bg="#2c3c4d",fg="white")
+Assistant_label.grid(row=2,column=0,pady=20)
+
 
 def speak(text):
     engine = pyttsx3.init()
@@ -7,7 +26,8 @@ def speak(text):
     engine.stop()
 
 
-speak("Hello Amrendra, I am your assistant.")
+speak("Hello User")
+speak("Click the button to speak.")
 
 
 
@@ -21,6 +41,7 @@ def listen():
     with sr.Microphone() as source:
 
         print("Listening...")
+        # Assistant_label.config(text="Listening..")
 
         recognizer.adjust_for_ambient_noise(source)
 
@@ -45,21 +66,21 @@ from datetime import datetime
 def tell_time():
 
     current = datetime.now().strftime("%H:%M")
-
+    
     speak(f"The time is {current}")
 
 
 def tell_date():
 
     today = datetime.now().strftime("%d %B %Y")
-
+    
     speak(today)
 
 import wikipedia
 def search_wiki(query):
 
     result = wikipedia.summary(query, sentences=2)
-
+    
     speak(result)
 
 
@@ -69,9 +90,11 @@ import urllib.parse
 def google_search(query):
     query = urllib.parse.quote(query)
     url = f"https://www.google.com/search?q={query}"
+    
     webbrowser.open(url)
 
-while True:
+def button():
+   
     command = listen()
   
 
@@ -86,7 +109,7 @@ while True:
         tell_date()
 
     elif "wikipedia" in command:
-
+       
         topic = command.replace("wikipedia","")
         search_wiki(topic)
     elif "youtube" in command:
@@ -114,10 +137,14 @@ while True:
         print("Assistant: Byeee Byee")
         
         speak("Byeee Byee")
-        break
+        root.destroy()
     elif command==" ":
         speak("Empty command")
     else:
         speak("Sorry , I can't do that yet?")
+tk.Button(container,text="Listen",font = ("Consolas",20,"bold"),
+          fg="white",bg="#2c3c4d",command=button).grid(row=1,column=0,pady=20)
+
+root.mainloop()
 
             
